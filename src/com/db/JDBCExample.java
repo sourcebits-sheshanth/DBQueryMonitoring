@@ -16,14 +16,14 @@ public class JDBCExample {
 		List<City> cityList = new ArrayList<>();
 		Connection conn = JDBCConnection.getDBConn();
 
-		//Execute a query
+		// Execute a query
 		System.out.println("Creating statement...");
 		Statement stmt = conn.createStatement();
 
 		String sql = "SELECT * FROM City";
 		ResultSet rs = stmt.executeQuery(sql);
 
-		//Extract data from result set
+		// Extract data from result set
 		while (rs.next()) {
 
 			// Retrieve by column name
@@ -40,7 +40,7 @@ public class JDBCExample {
 			city.setMap(map);
 			city.setName(name);
 			city.setState(state);
-			
+
 			cityList.add(city);
 
 		}

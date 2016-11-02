@@ -14,25 +14,26 @@ public class JDBCConnection {
 
 	private static Connection conn = null;
 
-	private JDBCConnection(){
+	private JDBCConnection() {
 	}
-	
+
 	public static Connection getDBConn() {
 
-		if(conn != null) return conn;
-		
+		if (conn != null)
+			return conn;
+
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		String DB_URL = "jdbc:mysql://127.0.0.1:3306/Development";
 
-		//Database credentials
+		// Database credentials
 		String USER = "username";
 		String PASS = "password";
 
-		//Register JDBC driver
+		// Register JDBC driver
 		try {
 			Class.forName(JDBC_DRIVER);
 
-			//Open a connection
+			// Open a connection
 			System.out.println("Connecting to a selected database...");
 			conn = DriverManager.getConnection(DB_URL, USER, PASS);
 			System.out.println("Connected database successfully...");

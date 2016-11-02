@@ -22,11 +22,11 @@ public class JDBCConnection {
 		if(conn != null) return conn;
 		
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-		String DB_URL = "jdbc:mysql://52.221.233.113:3306/Development";
+		String DB_URL = "jdbc:mysql://127.0.0.1:3306/Development";
 
 		//Database credentials
-		String USER = "stocksapp";
-		String PASS = "#StocksApp#";
+		String USER = "username";
+		String PASS = "password";
 
 		//Register JDBC driver
 		try {

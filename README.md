@@ -17,18 +17,37 @@ Database : MySQL
 DatabaseName : Development
 TableName : City
 
-CREATE TABLE `City` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `country` varchar(255) DEFAULT NULL,
-  `map` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `state` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE City (
+  id int(20) NOT NULL,
+  country varchar(255) DEFAULT NULL,
+  map varchar(255) DEFAULT NULL,
+  name varchar(255) DEFAULT NULL,
+  state varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+CREATE TABLE population (
+  id int(11) unsigned NOT NULL,
+  year int(11) NOT NULL,
+  humans int(11) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 =========================================================================================
 Table Data:
+INSERT INTO City (id, name, state, country, map)
+VALUES
+	(1, 'Mysore', 'Karnataka', 'India', 52.35000000),
+	(2, 'Bangalore', 'Karnataka', 'India', 46.89000000),
+	(3, 'Udpi', 'Karnataka', 'India', 12.00000000),
+	(4, 'Pune', 'Maharasta', 'India', 67.00000000);
 
-id	country		map		name	state
-1	India		52.35	Mysore	Karnataka
-2	India		46.89	Bangalore	Karnataka
+
+
+INSERT INTO population (id, year, humans)
+VALUES
+	(1, 1990, 200),
+	(2, 1995, 270),
+	(3, 2000, 320),
+	(4, 2010, 500),
+	(5, 2016, 690);

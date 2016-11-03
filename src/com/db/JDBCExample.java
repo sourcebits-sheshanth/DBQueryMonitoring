@@ -10,6 +10,7 @@ import java.util.List;
 import org.json.JSONArray;
 
 import com.entity.City;
+import com.entity.Plot;
 import com.entity.Population;
 
 public class JDBCExample {
@@ -101,8 +102,37 @@ public class JDBCExample {
 	}
 
 	
+	public static JSONArray graph(){
+		
+		List<Plot> list = new ArrayList<Plot>();
+		Plot plot1 = new Plot();
+		plot1.setCount(70);
+		
+		
+		plot1.setDates("2016-10-03 00:00:00 ");
+		
+		Plot plot2 = new Plot();
+		plot2.setCount(600);
+		plot2.setDates("2016-10-20 00:00:00");
+		
+		Plot plot3 = new Plot();
+		plot3.setCount(40000);
+		plot3.setDates("2016-10-21 00:00:00");
+		
+		list.add(plot1);
+		list.add(plot2);
+		list.add(plot3);
+		JSONArray array = new JSONArray(list);
+		
+		System.out.println(array.toString());
+		
+		return array;
+		
+	}
+	
 	public static String sayHello(String name) {
 		return "Welcome Mr . " + name;
 	}
+	
 	
 }

@@ -33,7 +33,7 @@
 
 		// Create the data table.
 		var data = new google.visualization.DataTable();
-		data.addColumn('number', 'year');
+		data.addColumn('string', 'year');
 		data.addColumn('number', 'humans');
 		<% for(int idx =0 ; idx<resp.length(); idx++ ) 
 		 { 
@@ -47,7 +47,7 @@
 		 
 		 %>
 		data.addRow(
-		               [<%=year%> , Number(<%=humans%>)]
+		               ['<%=year%>' , Number(<%=humans%>)]
 		)
 		<%}%>
 		var view = new google.visualization.DataView(data);

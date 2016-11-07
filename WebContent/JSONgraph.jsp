@@ -82,9 +82,11 @@
 
 </head>
 <body>
+	<br><a href="index.html">Home</a>
+	<br><a href="JSONgraph.jsp">JSON-Amd Graph</a>
 
-	
-	<div id="chart_div"></div>
+	<br><a href="LinearChart.jsp"> Population Linear Chart</a>
 
+	<br><div id="chart_div"></div>
 </body>
 </html>

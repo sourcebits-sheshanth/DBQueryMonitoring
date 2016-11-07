@@ -130,6 +130,42 @@ public class JDBCExample {
 		
 	}
 	
+	
+	
+	public static JSONArray getPopulationDetails2(){
+		
+		List<Population> list = new ArrayList<Population>();
+		Population p1 = new Population();
+		p1.setYear(1990);
+		p1.setHumans(200);
+		
+		
+		Population p2 = new Population();
+		p2.setYear(1995);
+		p2.setHumans(300);
+		
+		
+		
+		Population p3 = new Population();
+		p1.setYear(1998);
+		p1.setHumans(280);
+		
+		
+		Population p4 = new Population();
+		p1.setYear(2004);
+		p1.setHumans(400);
+		
+		list.add(p1);
+		list.add(p2);
+		list.add(p3);
+		JSONArray array = new JSONArray(list);
+		
+		System.out.println(array.toString());
+		
+		return array;
+		
+	}
+	
 	public static String sayHello(String name) {
 		return "Welcome Mr . " + name;
 	}
